@@ -1,0 +1,27 @@
+{
+    "name": "Color picker",
+    "description": "Get color codes from any Web-Page.",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "Popup.html",
+        "default_icon": "color_picker.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScripts.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]    
+}

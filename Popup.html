@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color-Picker Popup html</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #mainCont {
+        min-width: 150px;
+        width: max-content;
+      }
+
+      #mainCont > h1 {
+        font-family: "Rubik Vinyl", cursive;
+        color: #852999;
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      #picker_btn {
+        background-color: #ff8000;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        flex-grow: 1;
+        font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        height: 36px;
+        line-height: 20px;
+        margin-left: 8px;
+        margin-right: 6px;
+        min-width: 185px;
+        padding: 0 16px 0 16px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      #picker_btn:hover {
+        background-color: #e4e6eb;
+        color: #050505;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      #result {
+        list-style: none;
+        grid-gap: 10px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      #result > li {
+        cursor: pointer;
+        padding: 2px 5px;
+        /* font-weight: bold; */
+        font-size: 15px;
+        border: 2px solid #f49d1a;
+        border-radius: 5px;
+        text-align: center;
+        color: #243763;
+        /* text-shadow: 0.5px 0.5px 0 #cfcfcf, -0.5px -0.5px 0 #cfcfcf,
+          0.5px -0.5px 0 #cfcfcf, -0.5px 0.5px 0 #cfcfcf; */
+      }
+
+      .errorLabel {
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 14px;
+        border-radius: 10px;
+      }
+
+      #ClearButton {
+        padding: 5px 7px;
+        border-radius: 10px;
+        background-color: #EF9A53;
+        color: white;
+        border: 1px solid black;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        margin: 0px 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      #ClearButton:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="mainCont">
+      <h1>Color Picker</h1>
+      <div id="picker_btn_cont"></div>
+
+      <ul id="result">
+        <!-- <li>hero</li> -->
+      </ul>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
